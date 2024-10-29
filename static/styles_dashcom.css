@@ -1,0 +1,101 @@
+body {
+    font-family: Quicksand, sans-serif;
+    background-color: #0A1128;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.general-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.graphs-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    display: flex; /* ใช้ flex เพื่อจัด layout */
+    justify-content: space-between; /* ให้กราฟทั้งสองแยกกัน */
+    gap: 20px; /* ลดระยะห่างระหว่างกราฟ */
+}
+
+.bar-chart, .pie-chart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%; /* ปรับขนาดให้ลดลงเพื่อทำให้มีพื้นที่มากขึ้น */
+}
+
+.bar-chart {
+    width: 63%; /* ขยายขนาดของ bar chart ให้มากขึ้น */
+}
+
+.pie-chart {
+    width: 30%; /* ขนาด pie chart ที่เล็กลงเล็กน้อย */
+}
+
+.data-table {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background-color: #1a73e8;
+    color: #fff;
+    
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    
+    
+}
+
+button {
+    font-family: Quicksand, sans-serif;
+    width: 10%;
+    padding: 8px;
+    background-color: #3C4F76; /* เทาสเลท */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #2a53a7; /* เทาสเลท */
+}
