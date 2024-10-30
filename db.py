@@ -16,31 +16,6 @@ def fetch_total_all():
     conn.close()
     return total_data
 
-# ฟังก์ชันสำหรับดึงข้อมูลของ UK เท่านั้น
-def fetch_total_uk():
-    total_data = []
-    conn = sqlite3.connect(conn_str)
-    cursor = conn.cursor()
-    query = "SELECT SUM(people_count) AS total_emp, SUM(changes_count) AS total_change, COUNT(com_id) AS total_com FROM comlogs WHERE area = 2;"
-    cursor.execute(query)
-    rows = cursor.fetchall()
-    for row in rows:
-        total_data.append({"emp": row[0], "changes": row[1], "com": row[2]})
-    conn.close()
-    return total_data
-
-# ฟังก์ชันสำหรับดึงข้อมูลทั่วโลก (ยกเว้น UK)
-def fetch_total_ww():
-    total_data = []
-    conn = sqlite3.connect(conn_str)
-    cursor = conn.cursor()
-    query = "SELECT SUM(people_count) AS total_emp, SUM(changes_count) AS total_change, COUNT(com_id) AS total_com FROM comlogs WHERE area = 1;"
-    cursor.execute(query)
-    rows = cursor.fetchall()
-    for row in rows:
-        total_data.append({"emp": row[0], "changes": row[1], "com": row[2]})
-    conn.close()
-    return total_data
 
 # ฟังก์ชันสำหรับดึงข้อมูลบริษัทตาม com_id ที่ระบุ
 def fetch_com(com_id):
@@ -72,4 +47,3 @@ def fetch_com(com_id):
     return com_data  # ส่งคืน list ของ dictionary
 
 
-print(fetch_total_all())

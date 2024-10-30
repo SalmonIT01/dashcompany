@@ -1,3 +1,4 @@
+--ที่ใช้ใน sql server
 CREATE TABLE area (
     id INT PRIMARY KEY,
     type_name VARCHAR(50)
